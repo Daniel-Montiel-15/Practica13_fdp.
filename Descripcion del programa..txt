@@ -1,4 +1,0 @@
-Este programa 
-1) Lee los datos de un vector (A) de un archivo de texto llamado "vector.txt" 
-2) almacena dichos datos en variables.
-3) a traves de operaciones crea un vector (B) perpendicular al vector (A).
