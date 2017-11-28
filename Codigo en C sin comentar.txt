@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main () {
+	
+	printf("Programa para calcular vectores perpendiculares \n");
+	
+	FILE * archivo=NULL;
+	char* nombre= "vector.txt";
+    int x,y,z,a,b,c,d,f,g,h;
+	
+	archivo= fopen (nombre, "r");
+	
+	if (archivo==NULL) return 1;
+	
+	fscanf (archivo, "%i", & x);
+	printf("\n coordenada x: %i \n" , x);
+		fscanf (archivo, "%i", & y);
+	    printf("\n coordenada y: %i \n" , y);
+		  fscanf (archivo, "%i", & z);
+	      printf("\n coordenada z: %i \n" , z);
+	      
+	      printf("\n vector A=[%i],[%i],[%i] \n",x,y,z);
+	      
+	a= 1;
+	b= 1;
+	c= a*x;
+	d= b*y;
+	f= c+d;
+	g= (-1)*(f);
+	h= g/z;
+	
+	printf("\n vector perpendicular: B=[%i],[%i],[%i]",a,b,h);
+	
+	return 0;
+	
+}
