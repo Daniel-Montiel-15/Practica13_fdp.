@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main () {
+	
+	printf("Programa para calcular vectores perpendiculares \n");
+	
+	FILE * archivo=NULL;
+	char* nombre= "vector.txt";
+	//Tuve algunos problemas con el nombre, ya que en bloc de notas el txt es por defecto y no lo estaba poniendo//
+    int x,y,z,a,b,c,d,f,g,h;
+	
+	archivo= fopen (nombre, "r");
+	
+	if (archivo==NULL) return 1;
+	
+	// En esta parte me resulto un poco laborioso hacer que el programa leyera solo el contenido de un renglon del archivo y lo almacenara en una variable//
+	//Ya que las funciones que estaba empleando leian todo el contenido del archivo//
+	
+	fscanf (archivo, "%i", & x);
+	printf("\n coordenada x: %i \n" , x);
+		fscanf (archivo, "%i", & y);
+	    printf("\n coordenada y: %i \n" , y);
+		  fscanf (archivo, "%i", & z);
+	      printf("\n coordenada z: %i \n" , z);
+	      
+	      printf("\n vector A=[%i],[%i],[%i] \n",x,y,z);
+	   
+	// Aqui trate de realizar todas las operaciones en una sola variable, como ya lo habia hecho en la multiplicacion de matrices//
+	//Pero no me resulto, asi que distribuí las operaciones y se incremento el numero de variables//      
+	a= 1;
+	b= 1;
+	c= a*x;
+	d= b*y;
+	f= c+d;
+	g= (-1)*(f);
+	h= g/z;
+	
+	printf("\n vector perpendicular: B=[%i],[%i],[%i]",a,b,h);
+	
+	return 0;
+	
+}
